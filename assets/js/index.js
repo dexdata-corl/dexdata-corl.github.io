@@ -104,8 +104,8 @@ $(document).ready(function () {
   populate_people_html('talk-content2', talk_content.slice(3, ))
 
   // organizers content
-  populate_people_html('organizer-content-1', organizers_details.slice(0, 3))
-  populate_people_html('organizer-content-2', organizers_details.slice(3, ))
+  populate_people_html('organizer-content-1', organizers_details.slice(0, 4))
+  populate_people_html('organizer-content-2', organizers_details.slice(4, ))
 
   // accepted presentations
   populate_accepted_presentations("ppt-list", accepted_presentations)
@@ -194,7 +194,7 @@ $(document).ready(function () {
   });
 
   // Last updated
-  var apiUrl = "https://api.github.com/repos/NeuRL-RMW/NeuRL-RMW.github.io/commits?sha=main&per_page=1";
+  var apiUrl = "https://api.github.com/repos/jack-cobot/dexdata-corl.github.io/commits?sha=main&per_page=1";
   $.getJSON(apiUrl, function (data) {
     var commitDate = new Date(data[0].commit.committer.date);
     var formattedDate = commitDate.toDateString();

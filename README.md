@@ -1,2 +1,2 @@
-# NeuRL-RMW.github.io
-Repository to host the website for "Neural Representation Learning for Robot Manipulation Workshop"
+# dexdata-corl.github.io
+Repository to host the website for "Dexterous Manipulation Data for Robotic Foundation Models"
