@@ -133,66 +133,50 @@
       <div class="columns is-centered has-text-centered">
         <div class="column">
           <h2 class="title is-3">Overview</h2>
-        <div class="content has-text-justified">
-          <p>
-            Recent progress in imitation learning (IL), data-driven reinforcement learning (RL), and foundation models has sparked growing interest in building general-purpose robotic agents capable of performing diverse, complex tasks in real-world environments. Achieving this goal—especially for bimanual and dexterous systems—requires large-scale, high-quality datasets that capture a wide spectrum of behaviors, sensing modalities, and environmental diversity.
-          </p>
-          <p>
-            However, collecting such data at scale remains difficult due to challenges including human labor costs, embodiment gaps, hardware variability, and limitations in data standardization. This workshop will explore strategies for addressing the challenges of scalable data collection, including teleoperation via leader-follower setups, VR interfaces, shared autonomy, simulation-generated trajectories, and cross-domain dataset aggregation.
-          </p>
-          <p>
-            Concurrently, we will also examine challenges that arise when trying to leverage large-scale dexterous data—such as data augmentation, evaluation metrics, benchmarking protocols, and the infrastructure required to collect, curate, and serve data effectively. By bringing together the robot learning community across IL, RL, and foundation model approaches, we aim to foster the exchange of ideas, highlight promising tools and techniques, and discuss key open challenges in scaling data-driven robotics across complex, meaningful tasks.
-          </p>
-
-          <h4><strong>Discussion Questions by Topic:</strong></h4>
-
-          <strong>Human-in-the-Loop Demonstrations and Shared Autonomy</strong>
-          <ul>
-            <li>What are the most scalable ways to involve humans in collecting bimanual or dexterous demonstrations?</li>
-            <li>Can shared autonomy or corrective feedback loops (e.g., DAGGER-style corrections, residual learning) reduce reliance on fully teleoperated demos?</li>
-            <li>What tradeoffs exist between passive observation (e.g., wearable sensors, videos) vs. active control (e.g., VR, kinesthetic teaching)?</li>
-          </ul>
-
-          <strong>Scaling Across Modalities: Vision, Proprioception, Touch, and Language</strong>
-          <ul>
-            <li>How can we design datasets that capture richer, multimodal observations at scale?</li>
-            <li>What are the practical bottlenecks for collecting synchronized action, vision, force/torque, and tactile data?</li>
-            <li>How can we annotate and represent such data in a reusable and generalizable format?</li>
-          </ul>
-
-          <strong>Simulation vs. Real-World Data Generation</strong>
-          <ul>
-            <li>What are the relative strengths of simulation-generated vs. real-world data for dexterous and bimanual skills?</li>
-            <li>When are sim2real pipelines (e.g., domain randomization, real-to-sim pretraining) effective, and when do they break down?</li>
-            <li>Can simulation be used to bootstrap curriculum learning or scaffold more challenging real-world demonstrations?</li>
-          </ul>
-
-          <strong>Leveraging Foundation Models for Dataset Bootstrapping</strong>
-          <ul>
-            <li>In what ways can LLMs or VLMs assist in task specification, labeling, filtering, or synthesis?</li>
-            <li>Can generative models produce meaningful robot-relevant data (e.g., goal states, reward descriptions, corrective feedback)?</li>
-            <li>How might these models help translate across domains—e.g., aligning internet-scale video data with embodied robotic actions?</li>
-          </ul>
-
-          <strong>Data Augmentation</strong>
-          <ul>
-            <li>What forms of data augmentation (filtering, generation, visual, etc.) are suitable for manipulation?</li>
-            <li>How can we measure whether a data augmentation strategy meaningfully improves generalization?</li>
-          </ul>
-
-          <strong>Benchmarking and Evaluation at Scale</strong>
-          <ul>
-            <li>What are principled ways to benchmark performance on bimanual and dexterous tasks?</li>
-            <li>How should we evaluate generalization across objects, tasks, and domains?</li>
-          </ul>
-
-          <strong>Infrastructure and Standardization</strong>
-          <ul>
-            <li>What infrastructure is needed to collect, store, and serve large-scale datasets in real-world robotic labs?</li>
-            <li>How can we standardize data formats (e.g., RLDS, HDF5, TFDS, etc.) for broader reusability?</li>
-            <li>What are the challenges and opportunities in collaborative dataset building (e.g., across labs or institutions)?</li>
-          </ul>
-        </div>
+          <div class="content has-text-justified">
+            <p>
+              Scaling both robot data and model capacity has shown the potential for foundation models to enable general-purpose robotic agents capable of performing diverse and complex tasks in real-world environments. However, realizing this potential—particularly for bimanual and dexterous manipulation—requires large-scale datasets that capture a broad spectrum of behaviors, sensory modalities, and environmental variability. Collecting such data remains a major bottleneck due to challenges in human supervision, embodiment mismatch, and hardware limitations.
+            </p>
+            <p>
+              This workshop will examine scalable data collection strategies, including teleoperation via leader-follower control, virtual reality interfaces, shared autonomy, simulation-generated trajectories, and cross-domain dataset aggregation. It will also address challenges in leveraging large-scale dexterous data, such as data augmentation, evaluation metrics, standardized benchmarks, and the infrastructure needed to collect, curate, and serve data efficiently.
+            </p>
+            <p>
+              By convening researchers across imitation learning, reinforcement learning, and foundation model approaches, the workshop aims to identify key tools, methods, and open problems in scaling data-driven robotics for complex manipulation tasks.
+            </p>
+          
+            <h4><strong>Discussion Questions by Topic:</strong></h4>
+          
+            <strong>Human-in-the-Loop Demonstrations and Shared Autonomy</strong>
+            <ul>
+              <li>What are the most scalable approaches to collecting bimanual and dexterous demonstrations, including passive (e.g., video, wearable sensors) and active (e.g., VR, kinesthetic) methods?</li>
+              <li>Can shared autonomy or corrective feedback loops reduce reliance on fully teleoperated data?</li>
+            </ul>
+          
+            <strong>Multimodal Data Collection and Representation</strong>
+            <ul>
+              <li>How can we design datasets that capture richer, multimodal observations at scale?</li>
+              <li>What are the best practices for annotating and representing such data for generalizability?</li>
+            </ul>
+          
+            <strong>Simulation vs. Real-World Data Generation</strong>
+            <ul>
+              <li>When do sim2real strategies (e.g., domain randomization, real-to-sim pretraining) work well, and where do they fall short?</li>
+              <li>Can simulation help bootstrap real-world data collection via curriculum learning or synthetic scaffolds?</li>
+            </ul>
+          
+            <strong>Scaling with Foundation Models</strong>
+            <ul>
+              <li>How can LLMs/VLMs assist in specifying tasks, labeling, or filtering large-scale robotic datasets?</li>
+              <li>Can generative models synthesize useful robot data (e.g., goal states, trajectory sequences or reward signals)?</li>
+            </ul>
+          
+            <strong>Benchmarking, Infrastructure, and Open Access</strong>
+            <ul>
+              <li>What are principled ways to evaluate dexterous manipulation across tasks and domains?</li>
+              <li>How can we build standardized, scalable infrastructure (e.g., RLDS, TFDS) to support collaborative, multi-lab dataset creation?</li>
+              <li>What are the best practices for sharing and maintaining open datasets and tooling to promote reproducibility and community adoption?</li>
+            </ul>
+          </div>
           </div>
         </div>
       </div>
