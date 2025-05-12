@@ -138,15 +138,19 @@ $(document).ready(function () {
     let abstract = ``
     let talk_mode = ``
     let align_left = ``
-
-    if (schedule_entry[0] == 'inv-talk'){
-      speaker_details = talk_speaker_details[schedule_entry[3]]
-      talk_mode = schedule_entry[4] == 'online' ? `<span class='has-text-danger bold'>[Online]</span>` : ``
-      align_left = (speaker_details[5] != `` && speaker_details[6] != ``) ? "align-left" : ""
-      title = speaker_details[5] != `` ? `<h5 class="center has-text-success bold">${speaker_details[5]}</h5>` : ``
-      abstract = speaker_details[6] != `` ? `<p><span class="bold">Abstract.</span> ${speaker_details[6]}</p>` : `<p class="center">Details coming soon. Thanks for your patience.</p>`
-      title_abstract_html = ` ${talk_mode}: ${speaker_details[0]} (<span class='toggle-btn has-text-success'>Details</span>)`
-      hidden_row_html = `<tr class="hidden-content ${align_left}"><td colspan="2">${title}${abstract}</td></tr>`
+    if (schedule_entry[0] == 'inv-talk') {
+      if (talk_speaker_details[schedule_entry[3]]) {
+        speaker_details = talk_speaker_details[schedule_entry[3]]
+        talk_mode = schedule_entry[4] == 'online' ? `<span class='has-text-danger bold'>[Online]</span>` : ``
+        align_left = (speaker_details[5] != `` && speaker_details[6] != ``) ? "align-left" : ""
+        title = speaker_details[5] != `` ? `<h5 class="center has-text-success bold">${speaker_details[5]}</h5>` : ``
+        abstract = speaker_details[6] != `` ? `<p><span class="bold">Abstract.</span> ${speaker_details[6]}</p>` : `<p class="center">Details coming soon. Thanks for your patience.</p>`
+        title_abstract_html = ` ${talk_mode}: ${speaker_details[0]} (<span class='toggle-btn has-text-success'>Details</span>)`
+        hidden_row_html = `<tr class="hidden-content ${align_left}"><td colspan="2">${title}${abstract}</td></tr>`
+      } else {
+        // If speaker info is not available
+        title_abstract_html = ` <span class="has-text-grey">Speaker: TBD</span>`
+      }
     }
     if(['lunch-break', 'coffee-break'].includes(schedule_entry[0])){
       if (schedule_entry[0] == 'lunch-break'){

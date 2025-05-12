@@ -133,10 +133,66 @@
       <div class="columns is-centered has-text-centered">
         <div class="column">
           <h2 class="title is-3">Overview</h2>
-          <div class="content has-text-justified">
-            <p>
-              The recent progress in imitation learning (IL), data-driven reinforcement learning (RL), and foundation models has sparked growing interest in building general-purpose robotic agents capable of performing diverse, complex tasks in real-world environments. Achieving this goal—especially for bimanual and dextrous systems—requires large-scale, high-quality datasets that capture a wide spectrum of behaviors, sensing modalities, and environmental diversity. This workshop will explore strategies for scalable data collection, including teleoperation via leader-follower setups, VR interfaces, shared autonomy, simulation-generated trajectories, and cross-domain dataset aggregation. We will also address challenges in data augmentation, evaluation metrics, benchmarking protocols, and the infrastructure required to collect, curate, and serve data at scale. By bringing together the robot learning community across IL, RL, and foundation model approaches, we aim to foster the exchange of ideas, highlight promising tools and techniques, and discuss the key open challenges in scaling data-driven robotics across complex, yet meaningful tasks.
-            </p>
+        <div class="content has-text-justified">
+          <p>
+            Recent progress in imitation learning (IL), data-driven reinforcement learning (RL), and foundation models has sparked growing interest in building general-purpose robotic agents capable of performing diverse, complex tasks in real-world environments. Achieving this goal—especially for bimanual and dexterous systems—requires large-scale, high-quality datasets that capture a wide spectrum of behaviors, sensing modalities, and environmental diversity.
+          </p>
+          <p>
+            However, collecting such data at scale remains difficult due to challenges including human labor costs, embodiment gaps, hardware variability, and limitations in data standardization. This workshop will explore strategies for addressing the challenges of scalable data collection, including teleoperation via leader-follower setups, VR interfaces, shared autonomy, simulation-generated trajectories, and cross-domain dataset aggregation.
+          </p>
+          <p>
+            Concurrently, we will also examine challenges that arise when trying to leverage large-scale dexterous data—such as data augmentation, evaluation metrics, benchmarking protocols, and the infrastructure required to collect, curate, and serve data effectively. By bringing together the robot learning community across IL, RL, and foundation model approaches, we aim to foster the exchange of ideas, highlight promising tools and techniques, and discuss key open challenges in scaling data-driven robotics across complex, meaningful tasks.
+          </p>
+
+          <h4><strong>Discussion Questions by Topic:</strong></h4>
+
+          <strong>Human-in-the-Loop Demonstrations and Shared Autonomy</strong>
+          <ul>
+            <li>What are the most scalable ways to involve humans in collecting bimanual or dexterous demonstrations?</li>
+            <li>Can shared autonomy or corrective feedback loops (e.g., DAGGER-style corrections, residual learning) reduce reliance on fully teleoperated demos?</li>
+            <li>What tradeoffs exist between passive observation (e.g., wearable sensors, videos) vs. active control (e.g., VR, kinesthetic teaching)?</li>
+          </ul>
+
+          <strong>Scaling Across Modalities: Vision, Proprioception, Touch, and Language</strong>
+          <ul>
+            <li>How can we design datasets that capture richer, multimodal observations at scale?</li>
+            <li>What are the practical bottlenecks for collecting synchronized action, vision, force/torque, and tactile data?</li>
+            <li>How can we annotate and represent such data in a reusable and generalizable format?</li>
+          </ul>
+
+          <strong>Simulation vs. Real-World Data Generation</strong>
+          <ul>
+            <li>What are the relative strengths of simulation-generated vs. real-world data for dexterous and bimanual skills?</li>
+            <li>When are sim2real pipelines (e.g., domain randomization, real-to-sim pretraining) effective, and when do they break down?</li>
+            <li>Can simulation be used to bootstrap curriculum learning or scaffold more challenging real-world demonstrations?</li>
+          </ul>
+
+          <strong>Leveraging Foundation Models for Dataset Bootstrapping</strong>
+          <ul>
+            <li>In what ways can LLMs or VLMs assist in task specification, labeling, filtering, or synthesis?</li>
+            <li>Can generative models produce meaningful robot-relevant data (e.g., goal states, reward descriptions, corrective feedback)?</li>
+            <li>How might these models help translate across domains—e.g., aligning internet-scale video data with embodied robotic actions?</li>
+          </ul>
+
+          <strong>Data Augmentation</strong>
+          <ul>
+            <li>What forms of data augmentation (filtering, generation, visual, etc.) are suitable for manipulation?</li>
+            <li>How can we measure whether a data augmentation strategy meaningfully improves generalization?</li>
+          </ul>
+
+          <strong>Benchmarking and Evaluation at Scale</strong>
+          <ul>
+            <li>What are principled ways to benchmark performance on bimanual and dexterous tasks?</li>
+            <li>How should we evaluate generalization across objects, tasks, and domains?</li>
+          </ul>
+
+          <strong>Infrastructure and Standardization</strong>
+          <ul>
+            <li>What infrastructure is needed to collect, store, and serve large-scale datasets in real-world robotic labs?</li>
+            <li>How can we standardize data formats (e.g., RLDS, HDF5, TFDS, etc.) for broader reusability?</li>
+            <li>What are the challenges and opportunities in collaborative dataset building (e.g., across labs or institutions)?</li>
+          </ul>
+        </div>
           </div>
         </div>
       </div>
@@ -154,21 +210,22 @@
       <!--/ Speakers. -->
   </section>
 
-  <section id="accepted-presentations" class="section">
-    <div class="container is-max-desktop">
+  
+  <!--<section id="accepted-presentations" class="section">
+    <div class="container is-max-desktop">-->
       <!-- Accepted Presentations. -->
-      <div class="columns is-centered has-text-centered">
+      <!--<div class="columns is-centered has-text-centered">
         <div class="column">
-          <h2 class="title is-3">Accepted Presentations</h2>
+          <h2 class="title is-3">Accepted Presentations</h2>-->
           <!-- <span class="has-text-success bold">If you are interested in presenting your work, please check out the <a class="has-text-info" href="./call-for-presentations/" target="_blank" rel="noopener noreferrer">Call for Presentations</a> page.</span> -->
           <!-- Coming soon. Thanks for your patience. -->
           <!-- <div class="has-text-danger bold"><i class="fa fa-info-circle" aria-hidden="true"></i> Spotlight and poster presenter details will be updated after acceptance notification is sent.<br>For reference, a sample list is depicted below.</div><br> -->
-          <div id="ppt-list" class="content has-text-justified"></div>
+          <!--<div id="ppt-list" class="content has-text-justified"></div>
       </div>
-    </div>
+    </div>-->
     <!--/ Accepted Presentations. -->
-    </div>
-  </section>
+    <!--</div>
+  </section>-->
 
   <section id="organizers" class="section">
     <!-- Organizers. -->
@@ -210,7 +267,7 @@
           <h2 class="title is-3">Contact</h2>
           <div class="content center has-text-justified">
             Please feel free to send us your queries via email at <a
-              href="mailto:neurlrm.workshop@gmail.com">neurlrm.workshop@gmail.com</a>
+              href="mailto:dexdata.workshop@gmail.com">dexdata.workshop@gmail.com</a>
           </div>
         </div>
       </div>
