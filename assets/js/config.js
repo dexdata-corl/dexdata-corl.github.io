@@ -10,6 +10,7 @@ const talk_speaker_details = {
   'ss': ['Shiwei Sheng', 'assets/images/speakers/shiwei_sheng.jpg', 'Senior Software Engineering Manager', 'NVIDIA', '', '', ''],
   'cd': ['Coline Devin', 'assets/images/speakers/coline_devin.jpg', 'Research Scientist', 'Google DeepMind', '', '', ''],
   'tl': ['Tyler Lum', 'assets/images/speakers/tyler_lum.jpg', 'PhD Student', 'Standford', '', '', ''],
+  'ag': ['Adrien Gaidon','assets/images/speakers/adrien_gaidon.jpg','Partner / Adjunct Faculty','Calibrate Ventures / Stanford','', '', ''],
 }
 
 const organizers_details = [
